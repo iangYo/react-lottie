@@ -1,0 +1,153 @@
+#container {
+  max-width: 100vw;
+  height: 100vh;
+  padding: 0 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    max-width: 100%;
+
+    .wrapper-side {
+      display: none;
+    }
+
+    .wrapper-form {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: 500;
+        align-self: start;
+        margin-bottom: 1.25rem;
+        color: #332b60;
+      }
+
+      .wrapper-inputs {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        input {
+          height: 3.5rem;
+          padding: 25px;
+          margin-bottom: 2rem;
+
+          border-radius: 5px;
+          background: #edeef0;
+          border: none;
+          transition: background 0.2s;
+
+          &:focus {
+            outline: none;
+            background: #dbdcde;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 5rem;
+        font-size: 1.8rem;
+
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        color: #fcfdfe;
+        background: #87c4f8;
+        transition: background 0.2s;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          background: #80b8eb;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 960px) {
+  #container {
+    padding: 0;
+
+    .wrapper {
+      height: 100vh;
+      width: 100vw;
+
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+
+      background: #87c4f8;
+
+      .wrapper-side {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .side-text {
+          padding-left: 30px;
+          margin-top: -10em;
+          color: #332b60;
+
+          h1 {
+            font: 500 5rem Poppins;
+          }
+
+          h2 {
+            font: 500 3rem Archivo;
+          }
+        }
+      }
+
+      .wrapper-form {
+        height: 100%;
+        padding: 0 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background: #fff;
+        border-radius: 15px 0 0 15px;
+
+        button {
+          background: #87c4f8;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  #container {
+    .wrapper {
+      height: 100vh;
+
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+
+      .wrapper-side {
+
+        .side-text {
+          padding-left: 50px;
+        }
+      }
+
+      .wrapper-form {
+        .container-wrapper-form {
+          padding: 0 20px;
+          max-width: 700px;
+        }
+      }
+    }
+  }
+}
